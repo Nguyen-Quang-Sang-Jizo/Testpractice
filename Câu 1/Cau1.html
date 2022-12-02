@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm điểm thi cao thứ 3</title>
+</head>
+<body>
+<script>
+    let point = [45,3,7,9,2,1,0];
+    function max3(arr) {
+        for (let i = 0; i < arr.length-1; i++) {
+            for(let j = i+1; j < arr.length; j++) {
+                if(arr[i] > arr[j]) {
+                    let tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+        }
+        document.write('max3: ' + arr[arr.length - 3]);
+    }
+
+    max3(point);
+</script>
+</body>
+</html>
